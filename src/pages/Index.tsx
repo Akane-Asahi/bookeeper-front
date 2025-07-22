@@ -28,20 +28,8 @@ const Index = () => {
     // Simulate AI thinking time
     await new Promise(resolve => setTimeout(resolve, 1500 + Math.random() * 1000));
     
-    // Generate a sample response based on the user's message
-    let response = "I understand you're asking about: " + userMessage + ". ";
-    
-    if (userMessage.toLowerCase().includes('code')) {
-      response = "I'd be happy to help you with coding! Here's a basic example that might be useful for your request. Would you like me to explain any specific part or help you customize it further?";
-    } else if (userMessage.toLowerCase().includes('plan')) {
-      response = "Great idea! Here's a step-by-step plan I'd recommend: 1) Start by setting clear goals, 2) Break down the tasks into manageable pieces, 3) Set a timeline, and 4) Execute while staying flexible. Would you like me to elaborate on any of these steps?";
-    } else if (userMessage.toLowerCase().includes('email')) {
-      response = "I can help you draft a professional email. Here's a template you can customize: Start with a clear subject line, use a professional greeting, state your purpose clearly in the first paragraph, provide necessary details, and end with a polite call to action. Would you like me to help with any specific part?";
-    } else if (userMessage.toLowerCase().includes('explain')) {
-      response = "I'd be happy to explain that concept! Let me break it down into simple, easy-to-understand parts with real-world examples. This will help you grasp the fundamentals before we dive into more complex aspects.";
-    } else {
-      response = "That's an interesting question! I'm here to help you with a wide range of topics including writing, coding, planning, explaining concepts, and much more. Feel free to ask me anything specific, and I'll do my best to provide you with helpful and accurate information.";
-    }
+    // Default emotional intelligence response matching the image
+    const response = `Did you mean you're feeling Sad\nOr perhaps anxious bored\nRomantic ?\n\nClick on above tags or type YES to confirm or choose from: angry / anxious / bored / confused / depressed / happy / heartbroken / lonely / romantic / sad / stressed / tired`;
     
     setIsTyping(false);
     

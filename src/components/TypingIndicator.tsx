@@ -11,11 +11,14 @@ export function TypingIndicator() {
       </Avatar>
       
       <div className="flex items-center">
-        <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-3">
-          <div className="flex gap-1">
-            <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
-            <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-            <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+        <div className="bg-muted/50 rounded-2xl rounded-bl-md px-4 py-3">
+          <div className="flex items-center">
+            <span className="font-medium text-foreground">Bookeeper Analyzing</span>
+            <div className="flex ml-2">
+              <span className="animate-bounce" style={{ animationDelay: '0ms' }}>.</span>
+              <span className="animate-bounce" style={{ animationDelay: '150ms' }}>.</span>
+              <span className="animate-bounce" style={{ animationDelay: '300ms' }}>.</span>
+            </div>
           </div>
         </div>
       </div>
